@@ -25,7 +25,7 @@ function Products() {
             {
                 loading &&
                 <div className="flex items-center justify-center min-h-screen">
-                    <div className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-16 h-16 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
                 </div>
             }
 
@@ -37,7 +37,7 @@ function Products() {
 
             {
                 cosmetics.length > 0 &&
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {cosmetics.map((cosmetic) => (
                         <CosmeticCardOne key= {cosmetic.id} cosmetic={cosmetic} />
                     ))}

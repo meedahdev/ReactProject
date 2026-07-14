@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
             //create user
             const data = await CreateUser(signupForm)
             //store user to localstorage
-            localStorage.setItem("novacurrentuser", JSON.stringify(data))
+            localStorage.setItem("cosmeticCurrentUser", JSON.stringify(data))
             setCurrentUser(data)
             setLoading(false)
             nav("/")
@@ -56,7 +56,7 @@ export const AuthProvider = ({ children }) => {
         try {
             setLoading(true)
             const data = await LoginUser(loginForm.username)
-            localStorage.setItem("novacurrentuser", JSON.stringify(data))
+            localStorage.setItem("cosmeticCurrentUser", JSON.stringify(data))
             setCurrentUser(data)
             nav("/")
         } catch (error) {
@@ -67,7 +67,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     const logout = () => {
-        localStorage.removeItem("novacurrentuser")
+        localStorage.removeItem("cosmeticCurrentUser")
         setCurrentUser(null)
         setAskLogout(false)
     }

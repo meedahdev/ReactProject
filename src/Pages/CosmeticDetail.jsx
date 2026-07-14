@@ -31,7 +31,7 @@ function CosmeticDetail() {
                         <img className="rounded border-2 border-[#D4AF37]" src={cosmetic?.image} alt="" />
                     </div>
                     <div className="col-span-7 space-y-2">
-                       <h1 className="text-3xl text-pink-400">{cosmetic?.name}</h1>
+                       <h1 className="text-3xl text-black-400">{cosmetic?.name}</h1>
                        <p className="text-md text-[#D4AF37]">${cosmetic?.price}</p>
                         <p className="text-gray-300"> {cosmetic?.description}</p>
                        <button className="text-white rounded py-2 px-5 bg-pink-500 hover:bg-[#D4AF37] transition mt-6"> Add to Cart </button>

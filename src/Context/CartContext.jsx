@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { AddToCart, GetCartItems, RemoveFromCart } from "../Services/Cart";
+import { AddToCart, GetCartItems, RemoveFromCart, ClearCart } from "../Services/Cart";
 import { UserContext } from "./UserContext";
 
 export const CartContext = createContext()
@@ -59,7 +59,17 @@ export const CartProvider = ({ children }) => {
         setLoading(false)
     }
 
-    return <CartContext.Provider value={{ getAllCart, cartItems, addToCart, removeFromCart, loading }}>
+
+    const clearCart = async () => {
+    setLoading(true)
+
+    await ClearCart(currentUser.id)
+    await getAllCart()
+
+    setLoading(false)
+}
+
+    return <CartContext.Provider value={{ getAllCart, cartItems, addToCart, removeFromCart, clearCart, loading }}>
         {children}
     </CartContext.Provider>
 }

@@ -11,7 +11,7 @@ function Search() {
 
     const [quickSearch, setQuickSearch] = useState("")
 
-    const [searched, setSearched] = useState([])
+    const [searched, setSearched] = useState("")
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
@@ -25,17 +25,30 @@ function Search() {
         setLoading(false)
     }
 
+    // const handleChange = async (e) => {
+    //     setQuickSearch(e.target.value)
+    //     setQuickSearch(value);
+    //     setLoading(true)
+    //     const data = await SearchCosmetic(quickSearch)
+    //     setSearched(data)
+    //     setLoading(false)
+    // }
+
+
     const handleChange = async (e) => {
-        setQuickSearch(e.target.value)
-        setLoading(true)
-        const data = await SearchCosmetic(quickSearch)
-        setSearched(data)
-        setLoading(false)
-    }
+    const value = e.target.value;
+
+    setQuickSearch(value);
+
+    setLoading(true);
+    const data = await SearchCosmetic(value);
+    setSearched(data);
+    setLoading(false);
+}
 
     return (
         <>
-            <h1 className="text-4xl text-pink-500 font-bold">Search</h1>
+            <h1 className="text-4xl text-black-500 font-bold">Search</h1>
             <div className="bg-black flex gap-2 border border-[#D4AF37] rounded-2xl px-4 items-center flex-1 mt-4">
                 <FaSearch className="text-[#D4AF37]" />
                 <form className="flex flex-1" >

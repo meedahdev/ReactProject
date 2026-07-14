@@ -42,3 +42,30 @@ export const LoginUser = async (loginForm) => {
 
     return data[0]
 }
+
+
+export const UpdateUser = async (id, updatedUser) => {
+    const res = await fetch(
+        `https://dlivqqegnftltspldzev.supabase.co/rest/v1/user?id=eq.${id}`,
+        {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                apikey: "sb_publishable_oa0aVsXJFMxycKnKB39W8Q_Q80JLtji",
+                Authorization: "Bearer sb_publishable_oa0aVsXJFMxycKnKB39W8Q_Q80JLtji",
+                Prefer: "return=representation"
+            },
+            body: JSON.stringify(updatedUser)
+        }
+    );
+
+    const data = await res.json()
+
+console.log("Status:", res.status)
+console.log("Response:", data)
+
+if (!res.ok) {
+    throw new Error(data.message)
+}
+    return data[0]
+}

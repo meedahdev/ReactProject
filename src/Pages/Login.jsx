@@ -25,7 +25,7 @@ function Login() {
 
                         <div className="flex flex-col mb-4">
                             <label className="text-md mb-1">Email</label>
-                            <input type="email" placeholder="example@gmail.com" className={inputStyle} />
+                           <input type="email" name="email" value={loginForm.email} onChange={handleChange} placeholder="example@gmail.com" className={inputStyle} />
                         </div>
 
                         <button disabled={loading ? true : false} className="first-div w-full text-white p-2 rounded-md mb-2">{loading ? "Signing in..." : "Login"}</button>

@@ -101,3 +101,18 @@ export const RemoveFromCart = async (user, cosmetic) => {
         body: JSON.stringify({ ...get[0], cosmetics: toRemove })
     })
 }
+
+
+export const ClearCart = async (user) => {
+    await fetch(`https://dlivqqegnftltspldzev.supabase.co/rest/v1/cart?user_id=eq.${user}&status=eq.true`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            apikey: "sb_publishable_oa0aVsXJFMxycKnKB39W8Q_Q80JLtji",
+            Authorization: "Bearer sb_publishable_oa0aVsXJFMxycKnKB39W8Q_Q80JLtji"
+        },
+        body: JSON.stringify({
+            cosmetics: []
+        })
+    })
+}

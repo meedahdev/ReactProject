@@ -12,6 +12,12 @@ import { CartProvider } from "./Context/CartContext"
 import Cart from "./Pages/Cart"
 import { SearchProvider } from "./Context/SeachContext"
 import Products from "./Pages/Products"
+import MyOrders from "./Pages/MyOrders"
+import { FavoritesProvider } from "./Context/FavoritesContext"
+import Favorites from "./Pages/Favorites"
+import Settings from "./Pages/Settings"
+import OrderHistory from "./Pages/OrderHistory"
+import ManageOrders from "./Pages/ManageOrders"
 
 function App() {
   return (
@@ -20,23 +26,30 @@ function App() {
         <UserProvider>
           <AuthProvider>
             <CartProvider>
-            <SearchProvider>
+              <FavoritesProvider>
+                <SearchProvider>
 
 
-              <Routes>
-                <Route path="signup" element={<Signup />} />
-                <Route path="login" element={<Login />} />
+                  <Routes>
+                    <Route path="signup" element={<Signup />} />
+                    <Route path="login" element={<Login />} />
 
-                <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
-                  <Route path="/" element={<Dashboard />} />
-                  <Route path="/products" element={<Products />} />
-                  <Route path="/cosmetic/:id" element={<CosmeticDetail />} />
-                  <Route path="/search" element={<Search />} />
-                  <Route path="/cart" element={<Cart />} />
-                </Route>
+                    <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
+                      <Route path="/" element={<Dashboard />} />
+                      <Route path="/products" element={<Products />} />
+                      <Route path="/cosmetic/:id" element={<CosmeticDetail />} />
+                      <Route path="/search" element={<Search />} />
+                      <Route path="/cart" element={<Cart />} />
+                      <Route path="/my-order" element={<MyOrders />} />
+                      <Route path="/favorites" element={<Favorites />} />
+                      <Route path="/settings" element={<Settings />} />
+                      <Route path="/orders" element={<OrderHistory />} />
+                      <Route path="/manage-orders" element={<ManageOrders />} />
+                    </Route>
 
-              </Routes>
-              </SearchProvider>
+                  </Routes>
+                </SearchProvider>
+              </FavoritesProvider>
             </CartProvider>
           </AuthProvider>
         </UserProvider>

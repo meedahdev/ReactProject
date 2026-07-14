@@ -121,7 +121,7 @@ function Footer() {
                                 <input
                                     type="email"
                                     placeholder="Enter your email"
-                                    className="bg-white/10 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-orange-500 text-white"
+                                    className="bg-white/10 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-black text-white"
                                 />
 
                                 <button

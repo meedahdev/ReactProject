@@ -22,10 +22,10 @@ function Dashboard() {
         <>
             <Hero />
 
-            <h1 className="mt-6 mb-4 text-3xl text-black font-bold"> Most Ordered </h1>
+            <h1 className="mt-6 mb-4 text-2xl md:text-3xl font-bold"> Most Ordered </h1>
 
             {(mostOrdered.length == 0 && !loading) &&
-              <h1 className="text-pink-400 text-xl"> No cosmetic available</h1>}
+              <h1 className="text--400 text-xl"> No cosmetic available</h1>}
 
             {
                 loading &&
@@ -35,7 +35,7 @@ function Dashboard() {
             }
 
             {(mostOrdered.length > 0 && !loading) &&
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {mostOrdered.map((cosmetic) => (
                         <CosmeticCard 
                         
