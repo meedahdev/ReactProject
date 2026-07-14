@@ -1,16 +1,96 @@
-# React + Vite
+# ✨ Meedah's Beauty Haven
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Meedah's Beauty Haven is a modern cosmetic shopping web application where users can browse beauty products, add items to their cart, save favorites, place orders, and manage their account.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📖 Project Description
 
-## React Compiler
+This project was built as a frontend web application using React and Vite. It provides a simple and user-friendly interface for shopping for cosmetic products.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔐 User Authentication (Login & Signup)
+- 🏠 Dashboard
+- 💄 Browse Cosmetic Products
+- 🔍 Search Products
+- ❤️ Add and Remove Favorites
+- 🛒 Shopping Cart
+- 💳 Checkout
+- 📦 My Orders
+- 📝 Order History
+- ⚙️ User Settings
+- 🌙 Dark Mode
+- 📱 Responsive Design
+
+---
+
+## 🛠 Technologies Used
+
+- React
+- Vite
+- JavaScript (ES6)
+- Tailwind CSS
+- React Router DOM
+- Supabase
+- React Icons
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/meedahdev/ReactProject.git
+```
+
+Navigate into the project folder:
+
+```bash
+cd ReactProject
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+│── Components/
+│── Context/
+│── Layout/
+│── Pages/
+│── Services/
+│── Styles/
+│── App.jsx
+│── main.jsx
+```
+
+---
+
+## 👩‍💻 Author
+
+**Timehin Hameedah**
+
+GitHub: https://github.com/meedahdev
